@@ -17,6 +17,7 @@ func genderInfo(g gender) {
 func Main() {
 	i := 0
 	var j bool
+	f.Println("hello world!!!!!!!!!!!!!")
 	f.Println(i)
 	f.Println(j)
 	f.Println("")

@@ -8,7 +8,7 @@ type struct1 struct { // struct definition
 	str string
 }
 
-func main() {
+func Main() {
 	ms := new(struct1) // making a struct1 type variable
 	// Filling fields of the struct of struct1 type
 	ms.i1 = 10

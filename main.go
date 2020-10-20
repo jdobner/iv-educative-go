@@ -1,23 +1,27 @@
 package main
 
 import (
-	"fmt"
 	enums "github.com/jdobner/iv-educative-go/enums"
+	"github.com/jdobner/iv-educative-go/structs"
 	"os"
 )
 
 type module string
 
 const (
-	ENUMS   = "enums"
-	STRUCTS = "structs"
+	ENUMS     = "enums"
+	STRUCTS   = "structs"
+	FUNCTIONS = "functions"
 )
 
 func main() {
-	fmt.Println("hello world")
 	switch pkg := os.Args[1]; pkg {
 	case ENUMS:
 		enums.Main()
+	case STRUCTS:
+		structs.Main()
+	case FUNCTIONS:
+		runFunctions()
 	default:
 		panic("nothing defined")
 	}
