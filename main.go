@@ -1,45 +1,24 @@
 package main
 
-import f "fmt"
-
-
-type gender int  
-const (
-	UNKNOWN = iota
-	MALE 
-	FEMALE 
+import (
+	"fmt"
+	enums "github.com/jdobner/iv-educative-go/enums"
+	"os"
 )
 
-func genderInfo(g gender) {
-	f.Println(g)
-}
+type module string
+
+const (
+	ENUMS   = "enums"
+	STRUCTS = "structs"
+)
 
 func main() {
-	f.Println("Hello Jerry")
-	doStuff1()
-}
-
-func doStuff1() {
-	i := 0
-	var j bool
-	f.Println(i)
-	f.Println(j)
-	f.Println("")
-	f.Println(isZeroInt(0))
-	f.Println(isZeroInt(9))
-	f.Println(isZeroFloat(9))
-
-	const nine = 9
-	f.Println(isZeroFloat(nine))
-
-	genderInfo(5)
-}
-
-func isZeroInt(num int) bool {
-	return num == 0
-}
-
-
-func isZeroFloat(num float32) bool {
-        return num == 0
+	fmt.Println("hello world")
+	switch pkg := os.Args[1]; pkg {
+	case ENUMS:
+		enums.Main()
+	default:
+		panic("nothing defined")
+	}
 }
